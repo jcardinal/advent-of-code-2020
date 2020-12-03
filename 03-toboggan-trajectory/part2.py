@@ -1,3 +1,5 @@
+from functools import reduce
+
 with open("input.txt", "r") as f:
     terrain = f.read().splitlines()
 
@@ -21,10 +23,7 @@ def check_slope(slope):
 
 
 slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
-
-product = 1
-for slope in slopes:
-    trees_encountered = check_slope(slope)
-    product *= trees_encountered
+tree_counts = list(map(check_slope, slopes))
+product = reduce((lambda a, b: a * b), tree_counts)
 
 print(product)
