@@ -1,6 +1,6 @@
 import re
 
-with open("valid.txt", "r") as f:
+with open("input.txt", "r") as f:
     passport_list = f.read().split("\n\n")
 
 num_required_fields = 8
@@ -50,6 +50,8 @@ def validate_passport(passport):
         if passport["hgt"][-2:] == "cm":
             if int(passport["hgt"][0:-2]) in valid_cm_hgt_range:
                 pass
+            else:
+                return False
         elif int(passport["hgt"][0:-2]) in valid_in_hgt_range:
             pass
         else:
@@ -60,7 +62,7 @@ def validate_passport(passport):
     if not re.match(valid_hcl_regex, passport["hcl"]):
         return False
 
-    if passport["ecl"] not in valid_ecls:
+    if not passport["ecl"] in valid_ecls:
         return False
 
     if not re.match(valid_pid_regex, passport["pid"]):
