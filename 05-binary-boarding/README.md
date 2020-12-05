@@ -5,3 +5,5 @@ Feeling good about my solution to part 1. Even added a step to validate boarding
 Looking at part 2 made me re-evaluate how I accomplished part 1, and specifically, worry about whether I've created a function that has unexpected side effects. Tinkering suggests I didn't, but it makes me want to firm up my understanding of scopes. (In this case, I worried I created a function called `get_seat_id` that also happened to modify the boarding pass it was given.)
 
 Solving part 2 makes me wonder: am I supposed to feel gross when I make something work? 😝
+
+EDIT: came back and realized I had unused code needing to be cleaned up in part 2. I think I got the right answer, then stuck my fingers in my ears and ran away.
