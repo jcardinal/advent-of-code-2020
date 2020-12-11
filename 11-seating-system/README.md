@@ -4,6 +4,10 @@
 
 Including a bunch of notes on my thought process. Started by trying to define what some useful functions would be, and that list gradually evolved.
 
+Also, I'm passing around `seat_array` because I think I remember something about side effects are bad...or global vars are bad...or something. The explicit nature of passing in everything the function will need feels correct. That said, it sure makes the code verbose. I tried setting the array as a default argument, and I swear I had it working, but then right before I committed, it broke, giving a `NameError` saying `'seat_array' is not defined`. I'm letting it go because it feels like lipstick on a pig at this point, but I'm adding this to my list of things to come back to.
+
+Also also, this code takes a few seconds to run. May want to review why it's so inefficient.
+
 ### Things I need to do
 
 ✅ convert input to a 2-dimensional array (2d list? numpy array? import array module?)  
